@@ -38,14 +38,17 @@ const Button= styled.button`
 
 
 export default function CatInputs({ onCatsAction }: { onCatsAction: (cat: CatProps[]) => void }){
-
     const [number, setNumber] = useState(1);
+    const [Loading, setLoading] = useState(false);
 
     const HandleAPI = async () => {
         try{
+            setLoading(true);
             const cats: CatProps[] = await GetAllCats(number)
             onCatsAction(cats)
+            setLoading(false);
         } catch(error){
+            setLoading(false);
             console.log("Error while getting cat photos: " + error)
         }
 
@@ -57,7 +60,7 @@ export default function CatInputs({ onCatsAction }: { onCatsAction: (cat: CatPro
                 type="number"
                 value={number}
                 onChange={(e) => setNumber(Number(e.target.value))}
-            /><Button onClick={HandleAPI}>Get Kitties!</Button>
+            /><Button onClick={HandleAPI} disabled={Loading}>{Loading ? 'Loading...' : 'Get Kitties!'}</Button>
         </Wrapper>
     )
 

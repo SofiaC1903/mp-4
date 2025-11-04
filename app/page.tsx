@@ -23,6 +23,7 @@ export default function Home() {
         <div>
             <TITLE>CAT THERAPY</TITLE>
             <CatInputs onCatsAction={setCats}/>
+
             <CatDisplay inputCats={cats}/>
         </div>
     );
