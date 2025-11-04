@@ -1,17 +1,32 @@
 "use client"
 
 import styled from "styled-components";
-import { CatDiv } from "@/app/components/CatPreview";
 import Nav from "@/app/components/Nav";
+
 
 const TITLE = styled.h1`
     text-align: center;
-    padding-top: 4%;
+    padding: 2%;
     letter-spacing: 2px;
     font-family: "Chicle", serif;
     color: #FFD199;
     font-size: calc(3px + 4vw);
     text-shadow: -3px -2px 2px #B75D69;
+`
+
+const AboutDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width:70%;
+    margin: 4% auto;
+    padding: 4%;
+    border: 2px outset #171738;
+    border-radius: 8px;
+    background-color: #B6B0D6;
+    box-shadow: 4px 4px 10px #32555D;
 `
 
 const Intro = styled.h4`
@@ -26,13 +41,14 @@ export default function About(){
     return (
         <div>
             <Nav/>
+            <AboutDiv>
             <TITLE>ABOUT CAT THERAPY</TITLE>
-            <CatDiv>
+
                 <Intro>
                     Hello! I made this website for anyone that needed to see cat pics and feel better.
                     Have fun!
                 </Intro>
-            </CatDiv>
+            </AboutDiv>
         </div>
     )
 }

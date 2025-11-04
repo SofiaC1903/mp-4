@@ -14,7 +14,6 @@ export const CatDiv = styled.div`
     border-radius: 8px;
     background-color: #B6B0D6;
     box-shadow: 4px 4px 10px #32555D;
-    align-items: center;
 `
 
 const Img = styled.img`

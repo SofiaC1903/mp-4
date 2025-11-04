@@ -7,6 +7,18 @@ import CatDisplay from "@/app/components/CatDisplay";
 import styled from "styled-components";
 import Nav from "@/app/components/Nav";
 
+
+const TitleDiv = styled.div`
+    display: flex;
+
+    justify-content: center;
+    width: 30%;
+    margin: 3% auto;
+    border: 2px outset #171738;
+    border-radius: 8px;
+    background-color: #B6B0D6;
+    box-shadow: 4px 4px 10px #32555D;
+`
 const TITLE = styled.h1`
     text-align: center;
     padding-top: 4%;
@@ -24,9 +36,8 @@ export default function Home() {
     return (
         <div>
             <Nav/>
-            <TITLE>CAT THERAPY</TITLE>
+            <TitleDiv><TITLE>CAT THERAPY</TITLE></TitleDiv>
             <CatInputs onCatsAction={setCats}/>
-
             <CatDisplay inputCats={cats}/>
         </div>
     );
