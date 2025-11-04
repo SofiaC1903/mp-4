@@ -1,15 +1,18 @@
-import CatPreview from "@/app/components/CatPreview";
-import getAllCats from "@/api/getCatData/GetAllCats";
+"use client"
+
 import CatInputs from "@/app/components/CatInputs";
+import {useState} from "react";
+import {CatProps} from "@/types/CatProps";
+import CatDisplay from "@/app/components/CatDisplay";
 
-export default async function Home() {
+export default function Home() {
 
-    const cats = getAllCats( 10);
+    const [cats, setCats] = useState<CatProps[]>([]);
 
     return (
         <div>
-            <CatInputs/>
-            <CatPreview inputCats={cats}/>
+            <CatInputs onCatsGet={setCats}/>
+            <CatDisplay inputCats={cats}/>
         </div>
     );
 }
