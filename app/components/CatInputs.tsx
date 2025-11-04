@@ -3,10 +3,24 @@
 import { useState } from "react";
 import GetAllCats from "@/api/getCatData/getAllCats";
 import {CatProps} from "@/types/CatProps";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+    align-content: center;
+`
+
+const Input= styled.input`
+    background-color: #9CC2C9;
+    border-radius: 5px;
+`
+
+const Button= styled.button`
+`
+
 
 export default function CatInputs({ onCatsAction }: { onCatsAction: (cat: CatProps[]) => void }){
 
-    const [number, setNumber] = useState(5);
+    const [number, setNumber] = useState(1);
 
     const HandleAPI = async () => {
         try{
@@ -19,14 +33,13 @@ export default function CatInputs({ onCatsAction }: { onCatsAction: (cat: CatPro
     }
 
     return(
-        <div>
-            <input
+        <Wrapper>
+            <Input
                 type="number"
-                placeholder="How many cats do you wanna see?"
                 value={number}
                 onChange={(e) => setNumber(Number(e.target.value))}
-            /><button onClick={HandleAPI}>Get Kitties!</button>
-        </div>
+            /><Button onClick={HandleAPI}>Get Kitties!</Button>
+        </Wrapper>
     )
 
 }
