@@ -4,7 +4,4 @@ export type CatProps = {
     width: number,
     height: number,
     name: string,
-    temperament: string,
-    origin: string,
-    lifespan: string
 }

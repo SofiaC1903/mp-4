@@ -1,13 +1,16 @@
 import {CatProps} from "@/types/CatProps";
-import Image from "next/image";
+import styled from "styled-components"
+
+const Img = styled.img`
+    max-width: 25%
+`
 
 export default function CatPreview({cat,}:{cat:CatProps}){
+    console.log("Image url", cat.url)
+
     return (
         <div>
-            <h3>{cat.name} | {cat.origin}</h3>
-            <Image src={cat.url} width={cat.width} height={cat.height} alt={cat.name}/>
-            <p>Personality: {cat.temperament}</p>
-            <p>Average Lifespan: {cat.lifespan}</p>
+            <Img src={cat.url} alt={cat.name}/>
         </div>
     )
 }
