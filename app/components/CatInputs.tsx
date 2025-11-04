@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import GetAllCats from "@/api/getCatData/getAllCats";
+import GetAllCats from "@/lib/getAllCats";
 import {CatProps} from "@/types/CatProps";
 import styled from "styled-components";
 
