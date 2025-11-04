@@ -1,7 +1,7 @@
 import {CatProps} from "@/types/CatProps";
 import Image from "next/image";
 
-export default function CatPreview({cat}:{cat:CatProps}){
+export default function CatPreview({cat,}:{cat:CatProps}){
     return (
         <div>
             <h3>{cat.name} | {cat.origin}</h3>

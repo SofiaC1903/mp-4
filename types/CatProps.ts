@@ -1,8 +1,8 @@
 export type CatProps = {
     id: string,
+    url: string,
     width: number,
     height: number,
-    url: string,
     name: string,
     temperament: string,
     origin: string,
