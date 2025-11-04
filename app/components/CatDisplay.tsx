@@ -3,11 +3,11 @@
 import { CatProps } from "@/types/CatProps";
 import CatPreview from "./CatPreview";
 
-export default function CatDisplay({cat,} : {cat: CatProps[]}){
+export default function CatDisplay({inputCats} : {inputCats: CatProps[]}){
 
     return (
         <div>
-            {cat.map((cat)=>(
+            {inputCats.map((cat)=>(
                 <CatPreview key={cat.id} cat={cat}></CatPreview>
             ))}
         </div>

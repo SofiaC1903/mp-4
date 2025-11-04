@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <div>
-            <CatInputs onCatsGet={setCats}/>
+            <CatInputs onCatsAction={setCats}/>
             <CatDisplay inputCats={cats}/>
         </div>
     );

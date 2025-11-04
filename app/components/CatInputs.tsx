@@ -4,14 +4,14 @@ import { useState } from "react";
 import GetAllCats from "@/api/getCatData/getAllCats";
 import {CatProps} from "@/types/CatProps";
 
-export default function CatInputs({ onCatsGet }: { onCatsGet: (cats: CatProps[]) => void }){
+export default function CatInputs({ onCatsAction }: { onCatsAction: (cat: CatProps[]) => void }){
 
     const [number, setNumber] = useState(5);
 
     const HandleAPI = async () => {
         try{
             const cats: CatProps[] = await GetAllCats(number)
-            onCatsGet(cats)
+            onCatsAction(cats)
         } catch(error){
             console.log("Error while getting cat photos: " + error)
         }
