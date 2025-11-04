@@ -8,18 +8,18 @@ const CatDiv = styled.div`
     justify-content: space-evenly;
     flex: 25%;
     max-width:50%;
-    margin: 4%;
-    padding: 2%;
-    border: 2px solid #65000B;
+    margin: 3%;
+    padding: 1%;
+    border: 2px outset #171738;
     border-radius: 8px;
     background-color: #B6B0D6;
-    box-shadow: 2px 3px 10px #DA7635;
+    box-shadow: 4px 4px 10px #32555D;
     align-items: center;
     
 `
 
 const Img = styled.img`
-    max-width: 60%
+    max-width: 65%
 `
 
 export default function CatPreview({cat,}:{cat:CatProps}){

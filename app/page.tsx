@@ -8,9 +8,12 @@ import styled from "styled-components";
 
 const TITLE = styled.h1`
     text-align: center;
-    padding: 4%;
+    padding-top: 4%;
+    letter-spacing: 2px;
     font-family: "Chicle", serif;
-    font-size: calc(2px + 4vw);
+    color: #FFD199;
+    font-size: calc(3px + 4vw);
+    text-shadow: -3px -2px 2px #B75D69;
 `
 export default function Home() {
 
