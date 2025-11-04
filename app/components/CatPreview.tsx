@@ -2,7 +2,7 @@ import {CatProps} from "@/types/CatProps";
 import styled from "styled-components"
 
 
-const CatDiv = styled.div`
+export const CatDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -15,7 +15,6 @@ const CatDiv = styled.div`
     background-color: #B6B0D6;
     box-shadow: 4px 4px 10px #32555D;
     align-items: center;
-    
 `
 
 const Img = styled.img`
