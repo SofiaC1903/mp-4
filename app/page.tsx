@@ -1,9 +1,5 @@
 "use client"
 
-import CatInputs from "@/app/components/CatInputs";
-import {useState} from "react";
-import {CatProps} from "@/types/CatProps";
-import CatDisplay from "@/app/components/CatDisplay";
 import styled from "styled-components";
 import Nav from "@/app/components/Nav";
 
