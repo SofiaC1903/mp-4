@@ -11,6 +11,7 @@ export default async function getAllCats(number:number): Promise<CatProps[]>{
         {
             method: "GET",
             headers: {
+                "Content-Type": "application/json",
                 'x-apikey': API_KEY,
             }
         }
