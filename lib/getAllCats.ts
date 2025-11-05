@@ -3,8 +3,6 @@ import { CatProps } from "@/types/CatProps";
 
 export default async function getAllCats(number:number): Promise<CatProps[]>{
     const API_KEY = '' + process.env.XAPI_KEY;
-    console.log(process.env.xapikey)
-    console.log(API_KEY)
 
     const res = await fetch(
         `https://api.thecatapi.com/v1/images/search?limit=${number}`,
